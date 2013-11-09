@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D0E16B2182E184B00B72013 /* SCView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E16B1182E184B00B72013 /* SCView.m */; };
 		5D116F4F1824DB5A00762D73 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D116F4E1824DB5A00762D73 /* UIKit.framework */; };
 		5D116F511824DB5A00762D73 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D116F501824DB5A00762D73 /* Foundation.framework */; };
 		5D116F531824DB5A00762D73 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D116F521824DB5A00762D73 /* CoreGraphics.framework */; };
@@ -18,9 +19,13 @@
 		5D116F651824DB5B00762D73 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D116F641824DB5B00762D73 /* Default-568h@2x.png */; };
 		5D116F681824DB5B00762D73 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D116F671824DB5B00762D73 /* ViewController.m */; };
 		5D116F6B1824DB5B00762D73 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D116F691824DB5B00762D73 /* ViewController.xib */; };
+		5D548166182CB9C800E081AD /* ZoomableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D548165182CB9C800E081AD /* ZoomableView.m */; };
+		5DDA69B5182D118F00C9F78B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DDA69B4182D118F00C9F78B /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D0E16B0182E184B00B72013 /* SCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCView.h; sourceTree = "<group>"; };
+		5D0E16B1182E184B00B72013 /* SCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCView.m; sourceTree = "<group>"; };
 		5D116F4B1824DB5A00762D73 /* Demo2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D116F4E1824DB5A00762D73 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5D116F501824DB5A00762D73 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,6 +42,9 @@
 		5D116F661824DB5B00762D73 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5D116F671824DB5B00762D73 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5D116F6A1824DB5B00762D73 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		5D548164182CB9C800E081AD /* ZoomableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomableView.h; sourceTree = "<group>"; };
+		5D548165182CB9C800E081AD /* ZoomableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomableView.m; sourceTree = "<group>"; };
+		5DDA69B4182D118F00C9F78B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DDA69B5182D118F00C9F78B /* QuartzCore.framework in Frameworks */,
 				5D116F4F1824DB5A00762D73 /* UIKit.framework in Frameworks */,
 				5D116F511824DB5A00762D73 /* Foundation.framework in Frameworks */,
 				5D116F531824DB5A00762D73 /* CoreGraphics.framework in Frameworks */,
@@ -56,6 +65,7 @@
 		5D116F421824DB5A00762D73 = {
 			isa = PBXGroup;
 			children = (
+				5DDA69B4182D118F00C9F78B /* QuartzCore.framework */,
 				5D116F541824DB5B00762D73 /* Demo2 */,
 				5D116F4D1824DB5A00762D73 /* Frameworks */,
 				5D116F4C1824DB5A00762D73 /* Products */,
@@ -89,6 +99,10 @@
 				5D116F671824DB5B00762D73 /* ViewController.m */,
 				5D116F691824DB5B00762D73 /* ViewController.xib */,
 				5D116F551824DB5B00762D73 /* Supporting Files */,
+				5D548164182CB9C800E081AD /* ZoomableView.h */,
+				5D548165182CB9C800E081AD /* ZoomableView.m */,
+				5D0E16B0182E184B00B72013 /* SCView.h */,
+				5D0E16B1182E184B00B72013 /* SCView.m */,
 			);
 			path = Demo2;
 			sourceTree = "<group>";
@@ -176,6 +190,8 @@
 				5D116F5B1824DB5B00762D73 /* main.m in Sources */,
 				5D116F5F1824DB5B00762D73 /* AppDelegate.m in Sources */,
 				5D116F681824DB5B00762D73 /* ViewController.m in Sources */,
+				5D548166182CB9C800E081AD /* ZoomableView.m in Sources */,
+				5D0E16B2182E184B00B72013 /* SCView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +229,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Glare Technology (545BJ476E5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Glare Technology (545BJ476E5)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -228,6 +245,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "0061BE70-C00D-44BD-A3CF-F2E2160D1A85";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0061BE70-C00D-44BD-A3CF-F2E2160D1A85";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -244,7 +263,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Glare Technology (545BJ476E5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Glare Technology (545BJ476E5)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -252,6 +272,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "0061BE70-C00D-44BD-A3CF-F2E2160D1A85";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0061BE70-C00D-44BD-A3CF-F2E2160D1A85";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -260,10 +282,16 @@
 		5D116F6F1824DB5B00762D73 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Glare Technology (545BJ476E5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Glare Technology (545BJ476E5)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Demo2/Demo2-Prefix.pch";
 				INFOPLIST_FILE = "Demo2/Demo2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0061BE70-C00D-44BD-A3CF-F2E2160D1A85";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0061BE70-C00D-44BD-A3CF-F2E2160D1A85";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -271,10 +299,16 @@
 		5D116F701824DB5B00762D73 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Glare Technology (545BJ476E5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Glare Technology (545BJ476E5)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Demo2/Demo2-Prefix.pch";
 				INFOPLIST_FILE = "Demo2/Demo2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0061BE70-C00D-44BD-A3CF-F2E2160D1A85";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0061BE70-C00D-44BD-A3CF-F2E2160D1A85";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -298,6 +332,7 @@
 				5D116F701824DB5B00762D73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
