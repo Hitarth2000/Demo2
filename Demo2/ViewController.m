@@ -26,6 +26,9 @@
     
     btn.titleLabel.numberOfLines = 0;
     
+    
+    
+    
     scaleTracker=1;
 //     UITapGestureRecognizer *twoFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTwoFingerTap:)];
 //    [twoFingerTap setNumberOfTouchesRequired:2];
