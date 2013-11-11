@@ -20,13 +20,21 @@ CGFloat myScale;
     self = [super initWithFrame:frame];
     if (self)
     {
-        
+        self.originalFrame = frame;
         //CATiledLayer *tiledLayer = (CATiledLayer *)[self layer];
         /*
          levelsOfDetail and levelsOfDetailBias determine how the layer is rendered at different zoom levels. This only matters while the view is zooming, because once the the view is done zooming a new TiledPDFView is created at the correct size and scale.
          */
     }
     return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+	self = [super initWithCoder:aDecoder];
+	if(self) {
+        self.originalFrame = self.frame;
+	}
+	return self;
 }
 
 

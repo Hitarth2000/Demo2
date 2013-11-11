@@ -68,19 +68,19 @@
 - (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(float)scale
 {
 //    NSLog(@"Scale :%f",scale);
-    view.contentScaleFactor = scale;
-    
-    for (UIView * innerView in view.subviews)
-    {
-        innerView.contentScaleFactor = scale;
-        //NSLog(@"Class :%@",innerView.class);
-        
-       if([innerView isKindOfClass:[UIView class]])
-        for (UIView * inner in innerView.subviews)
-        {
-            inner.contentScaleFactor = scale;
-        }
-    }
+//    view.contentScaleFactor = scale;
+//    
+//    for (UIView * innerView in view.subviews)
+//    {
+//        innerView.contentScaleFactor = scale;
+//        //NSLog(@"Class :%@",innerView.class);
+//        
+//       if([innerView isKindOfClass:[UIView class]])
+//        for (UIView * inner in innerView.subviews)
+//        {
+//            inner.contentScaleFactor = scale;
+//        }
+//    }
     
     
     
@@ -203,8 +203,8 @@
 - (void)adjustZoomableView:(ZoomableView *)zoomableView toZoomScale:(float)zoomScale
 {
     zoomableView.bounds = CGRectMake(0, 0,
-                                     floor(zoomableView.frame.size.width*zoomScale),
-                                     floor(zoomableView.frame.size.height*zoomScale));
+                                     floor(zoomableView.originalFrame.size.width*zoomScale),
+                                     floor(zoomableView.originalFrame.size.height*zoomScale));
     zoomableView.layer.affineTransform = CGAffineTransformMakeScale(1.0/zoomScale, 1.0/zoomScale);
 }
 
