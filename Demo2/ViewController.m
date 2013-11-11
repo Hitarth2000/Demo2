@@ -188,15 +188,15 @@
 
 - (void)scrollViewDidZoom:(UIScrollView *)scrollView
 {
-    float zoom = scrollView.zoomScale;
-    
-    for (UIView * innerView in viewMain.subviews)
-    {
-        if([innerView isKindOfClass:[ZoomableView class]]) {
-            [self adjustZoomableView:(ZoomableView *)innerView toZoomScale:zoom];
-        } 
-    }
-    
+//    float zoom = scrollView.zoomScale;
+//    
+//    for (UIView * innerView in viewMain.subviews)
+//    {
+//        if([innerView isKindOfClass:[ZoomableView class]]) {
+//            [self adjustZoomableView:(ZoomableView *)innerView toZoomScale:zoom];
+//        } 
+//    }
+          
     
 }
 
