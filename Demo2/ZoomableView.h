@@ -19,6 +19,7 @@
 
 @property (nonatomic, assign) float previousScale;
 @property (nonatomic, assign) float scale;
+@property (nonatomic, assign) CGRect originalFrame;
 
 - (void)setTransformWithoutScaling:(CGAffineTransform)newTransform;
 
