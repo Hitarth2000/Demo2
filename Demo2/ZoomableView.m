@@ -21,15 +21,10 @@ CGFloat myScale;
     if (self)
     {
         
-        CATiledLayer *tiledLayer = (CATiledLayer *)[self layer];
+        //CATiledLayer *tiledLayer = (CATiledLayer *)[self layer];
         /*
          levelsOfDetail and levelsOfDetailBias determine how the layer is rendered at different zoom levels. This only matters while the view is zooming, because once the the view is done zooming a new TiledPDFView is created at the correct size and scale.
          */
-//        tiledLayer.levelsOfDetail = 4;
-//        tiledLayer.levelsOfDetailBias = 3;
-//        tiledLayer.tileSize = CGSizeMake(512.0, 512.0);
-//        
-//        myScale = scale;
     }
     return self;
 }
@@ -40,6 +35,17 @@ CGFloat myScale;
 {
     return [CATiledLayer class];
 }
+
+//- (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)context
+//{
+//    CGRect rect = CGContextGetClipBoundingBox(context);
+//    [updatedRects addObject:[NSValue valueWithCGRect:rect]];
+//    
+//    CGContextSaveGState(context);
+//    CGContextTranslateCTM(context, rect.origin.x, rect.origin.y);
+//    // ...draw into context...
+//    CGContextRestoreGState(context);
+//}
 
 
 - (void)layoutSubviews
@@ -71,10 +77,10 @@ CGFloat myScale;
 //}
 
 
--(void)resize:(CGFloat)scale
-{
-    self.transform = CGAffineTransformMakeScale((1*scale)-250, (1*scale)-350);
-    
+//-(void)resize:(CGFloat)scale
+//{
+//    self.transform = CGAffineTransformMakeScale((1*scale)-250, (1*scale)-350);
+//    
     //[self layer].anchorPoint = CGPointMake(0.0f, 0.0f);
     
 //    for(UIView * v in self.subviews)
@@ -86,10 +92,10 @@ CGFloat myScale;
 //            [(UILabel*)v adjustsFontSizeToFitWidth];
 //        }
 //    }
-}
+//}
 
-//- (void)drawRect:(CGRect)rect
-//{
+- (void)drawRect:(CGRect)rect
+{
 //    CGContextRef ctx = UIGraphicsGetCurrentContext();
 //    
 //    CGRect bounds = self.bounds;
@@ -106,6 +112,38 @@ CGFloat myScale;
 //    
 //    CGContextScaleCTM(ctx, bounds.size.width/_scale,bounds.size.height/_scale);
 //    [@"Hello!" drawAtPoint:CGPointMake(0, 0) withFont:[UIFont systemFontOfSize:15]];
-//}
+ 
+}
+
+- (void) drawString: (NSString*) s withFont: (UIFont*) font inRect: (CGRect) contextRect
+{
+    /*
+     Logic :1
+     */
+    
+//    CGFloat fontHeight = font.pointSize;
+//    CGFloat yOffset = (contextRect.size.height - fontHeight) / 2.0;
+//    CGRect textRect = CGRectMake(0, yOffset, contextRect.size.width, fontHeight);
+//    [s drawInRect: textRect withFont: font lineBreakMode: NSLineBreakByClipping  alignment: NSTextAlignmentCenter];
+    
+    
+    /*
+     Logic :2
+     */
+//    NSString *text = @"A bit of text to drawA bit of text to draw.";
+//    CGSize size = [text sizeWithFont:font constrainedToSize:CGSizeMake(100, MAXFLOAT) lineBreakMode:NSLineBreakByWordWrapping];
+//    NSLog(@"Size :%f %f",size.width,size.height);
+//    
+//    CGRect textFrame = (CGRect)
+//    {
+//        .size.width = 100,
+//        .size.height = 100,
+//    };
+//    CGSize textSize = [text sizeWithFont:font constrainedToSize:textFrame.size lineBreakMode:NSLineBreakByWordWrapping];
+//    CGRect newTextFrame = CGRectInset(textFrame, 0, (textFrame.size.height - textSize.height) / 2);
+//    [text drawInRect:newTextFrame withFont:font lineBreakMode:NSLineBreakByWordWrapping alignment:NSTextAlignmentCenter];
+    
+}
+
 
 @end

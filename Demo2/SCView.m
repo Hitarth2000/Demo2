@@ -34,7 +34,7 @@
 {
 //    NSLog(@"SCView layoutSubviews %f",self.zoomScale);
 //    CGAffineTransform transform = CGAffineTransformMakeScale(1.0/self.zoomScale, 1.0/self.zoomScale);
-//    
+//      
 //    for(UIView *view in self.subviews)
 //    {
 //        //view.transform = transform;

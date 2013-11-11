@@ -126,37 +126,87 @@
 //    
 //    view1.frame = CGRectMake((int)view1.frame.origin.x,
 //                              (int)view1.frame.origin.y,
-//                              (int)(view1.frame.size.width * scaleTracker),
-//                              (int)(view1.frame.size.height * scaleTracker));
-
+//                              (int)(view1.frame.size.width * scale)-20,
+//                              (int)(view1.frame.size.height * scale)-20);
 //    viewMain.transform = CGAffineTransformIdentity;
 //    viewMain.transform = CGAffineTransformScale(viewMain.transform ,scale, scale);
-
+//    viewMain.layer.contents = nil;
+//    [viewMain setNeedsDisplayInRect:viewMain.layer.bounds];
     
     
+    /*
+      Logic :4
+     */
+//    NSString * test = lbl.text;
+//    float wh = 90* scale;
+//    CGSize size = [test sizeWithFont:[UIFont systemFontOfSize:12]
+//                       constrainedToSize:CGSizeMake(90*scale, MAXFLOAT) lineBreakMode:NSLineBreakByWordWrapping];
+//    for(UIView * vw in view1.subviews)
+//        [vw removeFromSuperview];
+//    
+//    UILabel * lblTest = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 90*scale,90*scale)];
+//    lblTest.text = test;
+//    lblTest.font = [UIFont systemFontOfSize:12];
+//    lblTest.numberOfLines = 0;
+//    lblTest.backgroundColor = [UIColor redColor];
+//    lblTest.adjustsFontSizeToFitWidth = FALSE;
+//    if (size.height <= wh)
+//    {
+//        [view1 addSubview:lblTest];
+//    }
+//    else
+//    {
+//        for(UIView * vw in view1.subviews)
+//            [vw removeFromSuperview];
+//    }
     
     
-    [scroll setContentSize:CGSizeMake(scale*scroll.frame.size.width, scale*scroll.frame.size.height)];
+    /*
+     Logic :5
+     */
+//    lbl.bounds = CGRectMake(5, 5, 90*zoomScale, 90*zoomScale);
+//    lbl.layer.affineTransform = CGAffineTransformMakeScale(1.0/zoomScale, 1.0/zoomScale);
+    
+    /*
+     Logic :6
+     */
+    
+//    CATextLayer *label = [[CATextLayer alloc] init];
+//    [label setFontSize:16];
+//    [label setFrame:CGRectMake(5, 5, 90, 90)];
+//    [label setString:@"Hello"];
+//    [label setAlignmentMode:kCAAlignmentCenter];
+//    [label setForegroundColor:[[UIColor blackColor] CGColor]];
+//    lbl.backgroundColor = [UIColor redColor];
+//    [view1.layer addSublayer:label];
+    
+    [scroll setContentSize:CGSizeMake(scale*scroll.	frame.size.width, scale*scroll.frame.size.height)];
+    
+//    NSLog(@"View1 W:%f & H:%f",view1.frame.size.width,view1.frame.size.height);
+    NSLog(@"mainView W:%f & H:%f",viewMain.frame.size.width,viewMain.frame.size.height);
 }
 
 - (void)scrollViewDidZoom:(UIScrollView *)scrollView
 {
-//    float zoom = scrollView.zoomScale;
-//    NSLog(@"Zoom :%f",zoom);
+    float zoom = scrollView.zoomScale;
+    
+    for (UIView * innerView in viewMain.subviews)
+    {
+        if([innerView isKindOfClass:[ZoomableView class]]) {
+            [self adjustZoomableView:(ZoomableView *)innerView toZoomScale:zoom];
+        } 
+    }
     
     
-//    for (UIView * innerView in viewMain.subviews)
-//    {
-//        if([innerView isKindOfClass:[ZoomableView class]])
-//            [(ZoomableView*) innerView resize:scrollView.zoomScale];
-//    }
-    
-//    NSLog(@"View1 W:%f & H:%f",view1.frame.size.width,view1.frame.size.height);
-//    NSLog(@"mainView W:%f & H:%f",viewMain.frame.size.width,viewMain.frame.size.height);
-   
 }
 
-
+- (void)adjustZoomableView:(ZoomableView *)zoomableView toZoomScale:(float)zoomScale
+{
+    zoomableView.bounds = CGRectMake(0, 0,
+                                     floor(zoomableView.frame.size.width*zoomScale),
+                                     floor(zoomableView.frame.size.height*zoomScale));
+    zoomableView.layer.affineTransform = CGAffineTransformMakeScale(1.0/zoomScale, 1.0/zoomScale);
+}
 
 - (IBAction) clickonButton :(id)sender
 {
