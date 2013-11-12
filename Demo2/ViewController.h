@@ -11,7 +11,7 @@
 #import "ZoomableView.h"
 #import "SCView.h"
 
-@interface ViewController : UIViewController <UIScrollViewDelegate>
+@interface ViewController : UIViewController <UIScrollViewDelegate,UIGestureRecognizerDelegate>
 
 {
     IBOutlet SCView     * scroll;
@@ -26,8 +26,11 @@
     IBOutlet UIButton         * btn;
     
     
-    float previousScale;
+    IBOutlet    UIView      * view3;
+    IBOutlet    UILabel     * lbl3;
     
+    
+    float previousScale;
     float scaleTracker;
     
 }

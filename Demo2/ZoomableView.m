@@ -20,6 +20,8 @@ CGFloat myScale;
     self = [super initWithFrame:frame];
     if (self)
     {
+        self.userInteractionEnabled = TRUE;
+        
         self.originalFrame = frame;
         //CATiledLayer *tiledLayer = (CATiledLayer *)[self layer];
         /*
@@ -48,7 +50,7 @@ CGFloat myScale;
 //{
 //    CGRect rect = CGContextGetClipBoundingBox(context);
 //    [updatedRects addObject:[NSValue valueWithCGRect:rect]];
-//    
+//
 //    CGContextSaveGState(context);
 //    CGContextTranslateCTM(context, rect.origin.x, rect.origin.y);
 //    // ...draw into context...
@@ -58,20 +60,20 @@ CGFloat myScale;
 
 - (void)layoutSubviews
 {
-//    NSLog(@"layoutSubviews : %f %f",self.frame.size.width,self.frame.size.height);
+    //    NSLog(@"layoutSubviews : %f %f",self.frame.size.width,self.frame.size.height);
     
     
-//    for (UIView * view in self.subviews)
-//    {
-//        if([view isKindOfClass:[UIView class]])
-//        {
-//            NSLog(@"SubView : %f %f",view.frame.size.width,view.frame.size.height);
-//            CGRect frame = view.frame;
-//            frame.size.width = self.bounds.size.width;
-//            frame.size.height = 50;
-//            view.frame = frame;
-//        }
-//    }
+    //    for (UIView * view in self.subviews)
+    //    {
+    //        if([view isKindOfClass:[UIView class]])
+    //        {
+    //            NSLog(@"SubView : %f %f",view.frame.size.width,view.frame.size.height);
+    //            CGRect frame = view.frame;
+    //            frame.size.width = self.bounds.size.width;
+    //            frame.size.height = 50;
+    //            view.frame = frame;
+    //        }
+    //    }
 }
 
 //- (void)setTransformWithoutScaling:(CGAffineTransform)newTransform;
@@ -88,9 +90,9 @@ CGFloat myScale;
 //-(void)resize:(CGFloat)scale
 //{
 //    self.transform = CGAffineTransformMakeScale((1*scale)-250, (1*scale)-350);
-//    
-    //[self layer].anchorPoint = CGPointMake(0.0f, 0.0f);
-    
+//
+//[self layer].anchorPoint = CGPointMake(0.0f, 0.0f);
+
 //    for(UIView * v in self.subviews)
 //    {
 //        if([v isKindOfClass:[UILabel class]])
@@ -104,23 +106,23 @@ CGFloat myScale;
 
 - (void)drawRect:(CGRect)rect
 {
-//    CGContextRef ctx = UIGraphicsGetCurrentContext();
-//    
-//    CGRect bounds = self.bounds;
-//    bounds.size.width /= _scale;
-//    bounds.size.height /= _scale;
-//    
-//    //
-//    //    CGContextScaleCTM(ctx, scale, scale);
-//    //
-//    //    [[UIColor blackColor] set];
-//    //
-//    //    CGContextSetLineWidth(ctx, 3);
-//    //    CGContextStrokeRect(ctx, CGRectInset(bounds, 1.5*scale, 1.5*scale));
-//    
-//    CGContextScaleCTM(ctx, bounds.size.width/_scale,bounds.size.height/_scale);
-//    [@"Hello!" drawAtPoint:CGPointMake(0, 0) withFont:[UIFont systemFontOfSize:15]];
- 
+    //    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    //
+    //    CGRect bounds = self.bounds;
+    //    bounds.size.width /= _scale;
+    //    bounds.size.height /= _scale;
+    //
+    //    //
+    //    //    CGContextScaleCTM(ctx, scale, scale);
+    //    //
+    //    //    [[UIColor blackColor] set];
+    //    //
+    //    //    CGContextSetLineWidth(ctx, 3);
+    //    //    CGContextStrokeRect(ctx, CGRectInset(bounds, 1.5*scale, 1.5*scale));
+    //
+    //    CGContextScaleCTM(ctx, bounds.size.width/_scale,bounds.size.height/_scale);
+    //    [@"Hello!" drawAtPoint:CGPointMake(0, 0) withFont:[UIFont systemFontOfSize:15]];
+    
 }
 
 - (void) drawString: (NSString*) s withFont: (UIFont*) font inRect: (CGRect) contextRect
@@ -129,27 +131,27 @@ CGFloat myScale;
      Logic :1
      */
     
-//    CGFloat fontHeight = font.pointSize;
-//    CGFloat yOffset = (contextRect.size.height - fontHeight) / 2.0;
-//    CGRect textRect = CGRectMake(0, yOffset, contextRect.size.width, fontHeight);
-//    [s drawInRect: textRect withFont: font lineBreakMode: NSLineBreakByClipping  alignment: NSTextAlignmentCenter];
+    //    CGFloat fontHeight = font.pointSize;
+    //    CGFloat yOffset = (contextRect.size.height - fontHeight) / 2.0;
+    //    CGRect textRect = CGRectMake(0, yOffset, contextRect.size.width, fontHeight);
+    //    [s drawInRect: textRect withFont: font lineBreakMode: NSLineBreakByClipping  alignment: NSTextAlignmentCenter];
     
     
     /*
      Logic :2
      */
-//    NSString *text = @"A bit of text to drawA bit of text to draw.";
-//    CGSize size = [text sizeWithFont:font constrainedToSize:CGSizeMake(100, MAXFLOAT) lineBreakMode:NSLineBreakByWordWrapping];
-//    NSLog(@"Size :%f %f",size.width,size.height);
-//    
-//    CGRect textFrame = (CGRect)
-//    {
-//        .size.width = 100,
-//        .size.height = 100,
-//    };
-//    CGSize textSize = [text sizeWithFont:font constrainedToSize:textFrame.size lineBreakMode:NSLineBreakByWordWrapping];
-//    CGRect newTextFrame = CGRectInset(textFrame, 0, (textFrame.size.height - textSize.height) / 2);
-//    [text drawInRect:newTextFrame withFont:font lineBreakMode:NSLineBreakByWordWrapping alignment:NSTextAlignmentCenter];
+    //    NSString *text = @"A bit of text to drawA bit of text to draw.";
+    //    CGSize size = [text sizeWithFont:font constrainedToSize:CGSizeMake(100, MAXFLOAT) lineBreakMode:NSLineBreakByWordWrapping];
+    //    NSLog(@"Size :%f %f",size.width,size.height);
+    //
+    //    CGRect textFrame = (CGRect)
+    //    {
+    //        .size.width = 100,
+    //        .size.height = 100,
+    //    };
+    //    CGSize textSize = [text sizeWithFont:font constrainedToSize:textFrame.size lineBreakMode:NSLineBreakByWordWrapping];
+    //    CGRect newTextFrame = CGRectInset(textFrame, 0, (textFrame.size.height - textSize.height) / 2);
+    //    [text drawInRect:newTextFrame withFont:font lineBreakMode:NSLineBreakByWordWrapping alignment:NSTextAlignmentCenter];
     
 }
 
