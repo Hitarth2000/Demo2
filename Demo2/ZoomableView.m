@@ -14,28 +14,33 @@
 
 CGFloat myScale;
 
-// Create a new TiledPDFView with the desired frame and scale.
-- (id)initWithFrame:(CGRect)frame scale:(CGFloat)scale
+
+- (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self)
     {
-        self.userInteractionEnabled = TRUE;
-        
         self.originalFrame = frame;
+        
         //CATiledLayer *tiledLayer = (CATiledLayer *)[self layer];
         /*
          levelsOfDetail and levelsOfDetailBias determine how the layer is rendered at different zoom levels. This only matters while the view is zooming, because once the the view is done zooming a new TiledPDFView is created at the correct size and scale.
          */
+        
+        //self.layer.borderColor = [UIColor blackColor].CGColor;
+        //self.layer.borderWidth = 0.5f;
     }
     return self;
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder {
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
 	self = [super initWithCoder:aDecoder];
-	if(self) {
+
+	if(self)
+    {
         self.originalFrame = self.frame;
-	}
+    }
 	return self;
 }
 
@@ -106,23 +111,44 @@ CGFloat myScale;
 
 - (void)drawRect:(CGRect)rect
 {
-    //    CGContextRef ctx = UIGraphicsGetCurrentContext();
-    //
-    //    CGRect bounds = self.bounds;
-    //    bounds.size.width /= _scale;
-    //    bounds.size.height /= _scale;
-    //
-    //    //
-    //    //    CGContextScaleCTM(ctx, scale, scale);
-    //    //
-    //    //    [[UIColor blackColor] set];
-    //    //
-    //    //    CGContextSetLineWidth(ctx, 3);
-    //    //    CGContextStrokeRect(ctx, CGRectInset(bounds, 1.5*scale, 1.5*scale));
-    //
-    //    CGContextScaleCTM(ctx, bounds.size.width/_scale,bounds.size.height/_scale);
-    //    [@"Hello!" drawAtPoint:CGPointMake(0, 0) withFont:[UIFont systemFontOfSize:15]];
+//    CGContextRef ctx = UIGraphicsGetCurrentContext();
+//
+//    CGRect bounds = self.bounds;
+//    bounds.size.width /= _scale;
+//    bounds.size.height /= _scale;
+//
+//    CGContextScaleCTM(ctx, bounds.size.width/_scale,bounds.size.height/_scale);
+//        [@"This is testing for just test the numberOfLines.!" drawAtPoint:CGPointMake(0, 0) withFont:[UIFont systemFontOfSize:15]];
+//    
+//    [self drawString:nil withFont:[UIFont systemFontOfSize:16] inRect:rect];
     
+    // Parameters used for drawing.
+    const CGFloat lineWidth = .5;
+    const CGFloat spaceToBB = 0;   
+    const CGFloat lineColor[4] = { 0, 0, 0, 1 };
+    
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    
+    CGContextSetLineWidth(ctx, lineWidth);
+    CGContextSetStrokeColor(ctx, lineColor);
+    //CGContextSetShadow(ctx, CGSizeMake(shadowOffset, shadowOffset), shadowBlur);
+    
+    CGRect innerRect = rect;
+    
+    innerRect.size.width -= 2*spaceToBB;
+    innerRect.size.height -= 2*spaceToBB;
+    innerRect.origin.x += spaceToBB;
+    innerRect.origin.y += spaceToBB;
+    
+//    UIBezierPath *path =
+//    [UIBezierPath bezierPathWithRoundedRect:innerRect
+//                          byRoundingCorners:UIRectCornerAllCorners
+//                                cornerRadii:CGSizeMake(0, 0)
+//     ];
+//    [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:0];
+    
+//    CGContextAddPath(ctx, path.CGPath);
+//    CGContextStrokePath(ctx);
 }
 
 - (void) drawString: (NSString*) s withFont: (UIFont*) font inRect: (CGRect) contextRect
@@ -140,18 +166,18 @@ CGFloat myScale;
     /*
      Logic :2
      */
-    //    NSString *text = @"A bit of text to drawA bit of text to draw.";
-    //    CGSize size = [text sizeWithFont:font constrainedToSize:CGSizeMake(100, MAXFLOAT) lineBreakMode:NSLineBreakByWordWrapping];
-    //    NSLog(@"Size :%f %f",size.width,size.height);
-    //
-    //    CGRect textFrame = (CGRect)
-    //    {
-    //        .size.width = 100,
-    //        .size.height = 100,
-    //    };
-    //    CGSize textSize = [text sizeWithFont:font constrainedToSize:textFrame.size lineBreakMode:NSLineBreakByWordWrapping];
-    //    CGRect newTextFrame = CGRectInset(textFrame, 0, (textFrame.size.height - textSize.height) / 2);
-    //    [text drawInRect:newTextFrame withFont:font lineBreakMode:NSLineBreakByWordWrapping alignment:NSTextAlignmentCenter];
+    NSString *text = @"A bit of text to drawA bit of text to draw.";
+    CGSize size = [text sizeWithFont:font constrainedToSize:CGSizeMake(100, MAXFLOAT) lineBreakMode:NSLineBreakByWordWrapping];
+    NSLog(@"Size :%f %f",size.width,size.height);
+
+    CGRect textFrame = (CGRect)
+    {
+        .size.width = contextRect.size.width,
+        .size.height = contextRect.size.height,
+    };
+    CGSize textSize = [text sizeWithFont:font constrainedToSize:textFrame.size lineBreakMode:NSLineBreakByWordWrapping];
+    CGRect newTextFrame = CGRectInset(textFrame, 0, (textFrame.size.height - textSize.height) / 2);
+    [text drawInRect:newTextFrame withFont:font lineBreakMode:NSLineBreakByWordWrapping alignment:NSTextAlignmentCenter];
     
 }
 

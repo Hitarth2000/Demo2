@@ -20,6 +20,11 @@
 		5D116F681824DB5B00762D73 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D116F671824DB5B00762D73 /* ViewController.m */; };
 		5D116F6B1824DB5B00762D73 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D116F691824DB5B00762D73 /* ViewController.xib */; };
 		5D548166182CB9C800E081AD /* ZoomableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D548165182CB9C800E081AD /* ZoomableView.m */; };
+		5D8C7E0418320C8B00E1BA14 /* SubLable.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8C7E0318320C8B00E1BA14 /* SubLable.m */; };
+		5D8C7E0818322CA500E1BA14 /* BoothVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8C7E0618322CA500E1BA14 /* BoothVC.m */; };
+		5D8C7E0918322CA500E1BA14 /* BoothVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D8C7E0718322CA500E1BA14 /* BoothVC.xib */; };
+		5D8C7E0B1832304500E1BA14 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D8C7E0A1832304500E1BA14 /* map.png */; };
+		5D8C7E0E18323A9A00E1BA14 /* TickleGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8C7E0D18323A9A00E1BA14 /* TickleGestureRecognizer.m */; };
 		5DDA69B5182D118F00C9F78B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DDA69B4182D118F00C9F78B /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +49,14 @@
 		5D116F6A1824DB5B00762D73 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		5D548164182CB9C800E081AD /* ZoomableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomableView.h; sourceTree = "<group>"; };
 		5D548165182CB9C800E081AD /* ZoomableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomableView.m; sourceTree = "<group>"; };
+		5D8C7E0218320C8B00E1BA14 /* SubLable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubLable.h; sourceTree = "<group>"; };
+		5D8C7E0318320C8B00E1BA14 /* SubLable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubLable.m; sourceTree = "<group>"; };
+		5D8C7E0518322CA500E1BA14 /* BoothVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoothVC.h; sourceTree = "<group>"; };
+		5D8C7E0618322CA500E1BA14 /* BoothVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoothVC.m; sourceTree = "<group>"; };
+		5D8C7E0718322CA500E1BA14 /* BoothVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoothVC.xib; sourceTree = "<group>"; };
+		5D8C7E0A1832304500E1BA14 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
+		5D8C7E0C18323A9900E1BA14 /* TickleGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TickleGestureRecognizer.h; sourceTree = "<group>"; };
+		5D8C7E0D18323A9A00E1BA14 /* TickleGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TickleGestureRecognizer.m; sourceTree = "<group>"; };
 		5DDA69B4182D118F00C9F78B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -65,7 +78,6 @@
 		5D116F421824DB5A00762D73 = {
 			isa = PBXGroup;
 			children = (
-				5DDA69B4182D118F00C9F78B /* QuartzCore.framework */,
 				5D116F541824DB5B00762D73 /* Demo2 */,
 				5D116F4D1824DB5A00762D73 /* Frameworks */,
 				5D116F4C1824DB5A00762D73 /* Products */,
@@ -83,6 +95,7 @@
 		5D116F4D1824DB5A00762D73 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5DDA69B4182D118F00C9F78B /* QuartzCore.framework */,
 				5D116F4E1824DB5A00762D73 /* UIKit.framework */,
 				5D116F501824DB5A00762D73 /* Foundation.framework */,
 				5D116F521824DB5A00762D73 /* CoreGraphics.framework */,
@@ -93,6 +106,8 @@
 		5D116F541824DB5B00762D73 /* Demo2 */ = {
 			isa = PBXGroup;
 			children = (
+				5D8C7E0C18323A9900E1BA14 /* TickleGestureRecognizer.h */,
+				5D8C7E0D18323A9A00E1BA14 /* TickleGestureRecognizer.m */,
 				5D116F5D1824DB5B00762D73 /* AppDelegate.h */,
 				5D116F5E1824DB5B00762D73 /* AppDelegate.m */,
 				5D116F661824DB5B00762D73 /* ViewController.h */,
@@ -103,6 +118,11 @@
 				5D548165182CB9C800E081AD /* ZoomableView.m */,
 				5D0E16B0182E184B00B72013 /* SCView.h */,
 				5D0E16B1182E184B00B72013 /* SCView.m */,
+				5D8C7E0218320C8B00E1BA14 /* SubLable.h */,
+				5D8C7E0318320C8B00E1BA14 /* SubLable.m */,
+				5D8C7E0518322CA500E1BA14 /* BoothVC.h */,
+				5D8C7E0618322CA500E1BA14 /* BoothVC.m */,
+				5D8C7E0718322CA500E1BA14 /* BoothVC.xib */,
 			);
 			path = Demo2;
 			sourceTree = "<group>";
@@ -110,6 +130,7 @@
 		5D116F551824DB5B00762D73 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5D8C7E0A1832304500E1BA14 /* map.png */,
 				5D116F561824DB5B00762D73 /* Demo2-Info.plist */,
 				5D116F571824DB5B00762D73 /* InfoPlist.strings */,
 				5D116F5A1824DB5B00762D73 /* main.m */,
@@ -177,6 +198,8 @@
 				5D116F631824DB5B00762D73 /* Default@2x.png in Resources */,
 				5D116F651824DB5B00762D73 /* Default-568h@2x.png in Resources */,
 				5D116F6B1824DB5B00762D73 /* ViewController.xib in Resources */,
+				5D8C7E0918322CA500E1BA14 /* BoothVC.xib in Resources */,
+				5D8C7E0B1832304500E1BA14 /* map.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +215,9 @@
 				5D116F681824DB5B00762D73 /* ViewController.m in Sources */,
 				5D548166182CB9C800E081AD /* ZoomableView.m in Sources */,
 				5D0E16B2182E184B00B72013 /* SCView.m in Sources */,
+				5D8C7E0418320C8B00E1BA14 /* SubLable.m in Sources */,
+				5D8C7E0818322CA500E1BA14 /* BoothVC.m in Sources */,
+				5D8C7E0E18323A9A00E1BA14 /* TickleGestureRecognizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,8 +255,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Glare Technology (545BJ476E5)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Glare Technology (545BJ476E5)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: SAMEER MULLA (2Z53H9M9CK)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: SAMEER MULLA (2Z53H9M9CK)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -245,8 +271,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "0061BE70-C00D-44BD-A3CF-F2E2160D1A85";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0061BE70-C00D-44BD-A3CF-F2E2160D1A85";
+				PROVISIONING_PROFILE = "7561C991-8D91-4E9F-B509-3AF0B356DB8B";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7561C991-8D91-4E9F-B509-3AF0B356DB8B";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -263,8 +289,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Glare Technology (545BJ476E5)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Glare Technology (545BJ476E5)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: SAMEER MULLA (2Z53H9M9CK)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: SAMEER MULLA (2Z53H9M9CK)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -272,8 +298,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "0061BE70-C00D-44BD-A3CF-F2E2160D1A85";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0061BE70-C00D-44BD-A3CF-F2E2160D1A85";
+				PROVISIONING_PROFILE = "7561C991-8D91-4E9F-B509-3AF0B356DB8B";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7561C991-8D91-4E9F-B509-3AF0B356DB8B";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -282,15 +308,15 @@
 		5D116F6F1824DB5B00762D73 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Glare Technology (545BJ476E5)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Glare Technology (545BJ476E5)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: SAMEER MULLA (2Z53H9M9CK)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: SAMEER MULLA (2Z53H9M9CK)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Demo2/Demo2-Prefix.pch";
 				INFOPLIST_FILE = "Demo2/Demo2-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0061BE70-C00D-44BD-A3CF-F2E2160D1A85";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0061BE70-C00D-44BD-A3CF-F2E2160D1A85";
+				PROVISIONING_PROFILE = "7561C991-8D91-4E9F-B509-3AF0B356DB8B";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7561C991-8D91-4E9F-B509-3AF0B356DB8B";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -299,15 +325,15 @@
 		5D116F701824DB5B00762D73 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Glare Technology (545BJ476E5)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Glare Technology (545BJ476E5)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: SAMEER MULLA (2Z53H9M9CK)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: SAMEER MULLA (2Z53H9M9CK)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Demo2/Demo2-Prefix.pch";
 				INFOPLIST_FILE = "Demo2/Demo2-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0061BE70-C00D-44BD-A3CF-F2E2160D1A85";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0061BE70-C00D-44BD-A3CF-F2E2160D1A85";
+				PROVISIONING_PROFILE = "7561C991-8D91-4E9F-B509-3AF0B356DB8B";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7561C991-8D91-4E9F-B509-3AF0B356DB8B";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

@@ -10,31 +10,30 @@
 #import <QuartzCore/QuartzCore.h>
 #import "ZoomableView.h"
 #import "SCView.h"
-
+#import "SubLable.h"
+#import "BoothVC.h"
 @interface ViewController : UIViewController <UIScrollViewDelegate,UIGestureRecognizerDelegate>
 
 {
-    IBOutlet SCView     * scroll;
+    IBOutlet SCView                 * scroll;
+    
     IBOutlet ZoomableView           * view1;
-    IBOutlet UILabel          * lbl;
+    IBOutlet UILabel                * lbl;
     
-    IBOutlet ZoomableView     * viewMain;
-    
-    IBOutlet UIView           * view2;
-    IBOutlet UILabel          * lbl2;
-    
-    IBOutlet UIButton         * btn;
+    IBOutlet UIView                 * viewMain;
     
     
-    IBOutlet    UIView      * view3;
-    IBOutlet    UILabel     * lbl3;
+    
     
     
     float previousScale;
-    float scaleTracker;
     
 }
 
 - (IBAction) clickonButton :(id)sender;
+
+@property (nonatomic, retain) NSMutableArray            * arrayViews;
+@property (nonatomic, retain) NSMutableArray            * arrayTitles;
+@property (nonatomic, retain) BoothVC                   * booth;
 
 @end
